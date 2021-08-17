@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <style>
+        .slider input[type="range"] {
+            -webkit-apperance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: 2px;
+            background: gray;
+            color: gray;
+            position: relative;
+            width: 100%;
+            margin-top: 45%;
+        }
+        
+        .slider input[type="range"]::-webkit-slider-thumb {
+            --webkit-apperance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 15px;
+            border: 2px solid gray;
+            background: white;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="slider">
+
+        <input type="range" id="range" min="-1000" max="1000" step="1" value="0">
+
+    </div>
+    <script>
+        var value = document.getElementById("range");
+        range.oninput = function() {
+            console.log(this.value)
+            var value = this.value
+            if (value == 1000) {
+                alert('right end');
+            } else if (value == -1000) {
+                alert('left end');
+            }
+        }
+    </script>
+</body>
+
+</html>
