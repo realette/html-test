@@ -47,7 +47,13 @@
             });
         }
 
-
+        function animate() {
+            requestAnimationFrame(animate);
+            if (Mesh && Mesh.rotation) {
+                Mesh.rotation.y -= 0.005;
+            }
+            renderer.render(scene, camera);
+        }
 
         init();
         setLight();
